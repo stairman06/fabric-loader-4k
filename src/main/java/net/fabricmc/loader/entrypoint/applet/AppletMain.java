@@ -33,7 +33,7 @@ public final class AppletMain {
 	}
 
 	public static void main(String[] args) {
-		AppletFrame me = new AppletFrame("Minecraft", null);
+		AppletFrame me = new AppletFrame("Minecraft 4k (fabric-loader-4k)", null);
 		me.launch(args);
 	}
 }
