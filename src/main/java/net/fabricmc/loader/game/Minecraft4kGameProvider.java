@@ -48,9 +48,6 @@ public class Minecraft4kGameProvider implements GameProvider {
 	private boolean hasModLoader = false;
 
 	public static final EntrypointTransformer TRANSFORMER = new EntrypointTransformer(it -> Arrays.asList(
-			new EntrypointPatchHook(it),
-			new EntrypointPatchBranding(it),
-			new EntrypointPatchFML125(it),
 			new EntrypointPatch4k(it)
 	));
 
@@ -89,10 +86,6 @@ public class Minecraft4kGameProvider implements GameProvider {
 						.setName(getGameName())
 						.build())
 		);
-	}
-
-	public Path getGameJar() {
-		return gameJar;
 	}
 
 	@Override
@@ -134,7 +127,7 @@ public class Minecraft4kGameProvider implements GameProvider {
 		this.envType = envType;
 		List<String> entrypointClasses;
 
-		entrypointClasses = Arrays.asList("M");
+		entrypointClasses = Arrays.asList("M", "net.minecraft.Minecraft4k");
 
 		Optional<GameProviderHelper.EntrypointResult> entrypointResult = GameProviderHelper.findFirstClass(loader, entrypointClasses);
 		if (!entrypointResult.isPresent()) {

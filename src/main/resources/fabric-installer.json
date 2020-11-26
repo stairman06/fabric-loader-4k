@@ -48,6 +48,18 @@
       {
         "name": "org.ow2.asm:asm-util:9.0",
         "url": "https://maven.fabricmc.net/"
+      },
+      {
+        "name": "org.apache.logging.log4j:log4j-core:2.13.3",
+        "url": "https://repo1.maven.org/maven2/"
+      },
+      {
+        "name": "org.apache.logging.log4j:log4j-api:2.13.3",
+        "url": "https://repo1.maven.org/maven2/"
+      },
+      {
+        "name": "com.google.guava:guava:30.0-jre",
+        "url": "https://repo1.maven.org/maven2/"
       }
     ],
     "server": [
